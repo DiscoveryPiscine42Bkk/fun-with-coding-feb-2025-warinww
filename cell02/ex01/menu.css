@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 50px;
+}
+
+.dropdown {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+select {
+  background-color: blanchedalmond;
+  border: 2px solid rgb(228, 201, 163);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px orange;
+}
+
+select:hover {
+  background-color: rgb(228, 201, 163);
+}
+
+select:focus {
+  outline: none;
+  border-color: rgb(228, 201, 163);
+  box-shadow: 0 0 8px orange;
+}
