@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: pink;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
