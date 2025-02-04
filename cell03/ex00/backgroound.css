@@ -9,6 +9,6 @@ button {
     border: none;
     background-color: pink;
     color: black;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
 }
