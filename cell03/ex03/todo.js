@@ -11,7 +11,7 @@ const create = () => {
   item.innerHTML = text;
   item.onclick = () => deleteItem(item, timestamp);
   
-  ft_list.appendChild(item);
+  ft_list.prepend(item);
 };
 
 const deleteItem = (item, timestamp) => {
@@ -33,7 +33,7 @@ const loadItems = () => {
     item.innerHTML = text;
     item.onclick = () => deleteItem(item, key);
     
-    ft_list.appendChild(item);
+    ft_list.prepend(item);
   });
 };
 
