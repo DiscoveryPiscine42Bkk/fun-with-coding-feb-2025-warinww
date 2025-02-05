@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO LIST</title>
+  </head>
+
+  <style>
+    .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .button {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px
+    }
+
+    #ft_list > div {
+      background-color: pink;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    #ft_list > div:hover {
+      background-color: rgb(254, 129, 149);
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h1>TODO LIST</h1>
+      <div class="button" id="ft_list"></div>
+      <button onclick="create()">NEW</button>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
