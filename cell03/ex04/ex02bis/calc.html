@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="calc.css">
     <title>Calculator</title>
 </head>
 <body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .calculator {
+            display: flex;
+            gap: 10px;
+        }
+        
+        input, select, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
     <div class="calculator">
         <input type="text" id="left">
         <select id="operator">
@@ -21,6 +38,45 @@
         <input type="text" id="right">
         <button id="calculate">Try me!</button>
     </div>
-    <script src="calc.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            setInterval(() => alert("Please, use me..."), 30000);
+        
+            $("#calculate").click(function() {
+                let left = parseInt($("#left").val().trim());
+                let right = parseInt($("#right").val().trim());
+                let operator = $("#operator").val();
+                let result;
+        
+                if (left < 0 || right < 0 || isNaN(left) || isNaN(right)) {
+                    alert("Error :(");
+                    console.log("Error :(")
+                    return;
+                }
+        
+                if (right === 0 && (operator === "/" || operator === "%")) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+        
+                if (operator === "+") {
+                    result = left + right;
+                } else if (operator === "-") {
+                    result = left - right;
+                } else if (operator === "*") {
+                    result = left * right;
+                } else if (operator === "/") {
+                    result = left / right;
+                } else if (operator === "%") {
+                    result = left % right;
+                }
+        
+                alert(result);
+                console.log(result);
+            });
+        });        
+    </script>
 </body>
 </html>
