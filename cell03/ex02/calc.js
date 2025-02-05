@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let operator = operatorSelect.value;
         let result;
 
-        if (left < 0 || right < 0) {
+        if (left < 0 || right < 0 || left < 0 || right < 0) {
             alert("Error :(");
+            console.log("Error :(")
             return;
         }
 
