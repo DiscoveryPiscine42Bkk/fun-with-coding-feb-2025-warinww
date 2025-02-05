@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let left = parseInt(leftInput.value.trim());
         let right = parseInt(rightInput.value.trim());
         let operator = operatorSelect.value;
+        let result;
 
         if (left < 0 || right < 0) {
             alert("Error :(");
@@ -24,13 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let result;
-        switch (operator) {
-            case "+": result = left + right; break;
-            case "-": result = left - right; break;
-            case "*": result = left * right; break;
-            case "/": result = left / right; break;
-            case "%": result = left % right; break;
+        if (operator === "+") {
+            result = left + right;
+        } else if (operator === "-") {
+            result = left - right;
+        } else if (operator === "*") {
+            result = left * right;
+        } else if (operator === "/") {
+            result = left / right;
+        } else if (operator === "%") {
+            result = left % right;
         }
 
         alert(result);
