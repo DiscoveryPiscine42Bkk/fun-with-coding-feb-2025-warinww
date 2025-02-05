@@ -1,7 +1,5 @@
 $(document).ready(function() {
   const $ft_list = $("#ft_list");
-
-  $("#new-button").on("click", create);
   
   const create = () => {
     let text = prompt("Please Enter TODO LIST :");
@@ -39,4 +37,6 @@ $(document).ready(function() {
   };
 
   loadItems();
+
+  $("#new-button").on("click", create);
 });
