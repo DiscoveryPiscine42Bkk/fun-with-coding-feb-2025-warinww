@@ -235,7 +235,7 @@ body {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 850px) {
     .nav-bar {
         width: 100%;
         gap: 20px;
